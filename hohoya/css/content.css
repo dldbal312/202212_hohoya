@@ -1,0 +1,132 @@
+@charset "UTF-8";
+@import "../css/reset.css";
+
+/*************** 공통요소 (클래스 한개로 제어) *****************/
+/* 섹션별 */
+.sect_conb1:last-child{margin-bottom:0 !important;}
+.sect_conb1{margin-bottom:40px;}
+.sect_conb2{margin-bottom:20px;}
+.sect_cont1:first-child{margin-top:0 !important;}
+.sect_cont1{margin-top:40px;}
+.sect_cont2{margin-top:20px;}
+
+/* 타이틀 */
+.tit_area{margin-bottom:14px;display:flex;justify-content:space-between;line-height:1.3;align-items:center;}
+.tit_area.sty1 .tit{padding-left:8px;border-left:5px solid #ff7417;color:#ff7417;font-size:19px;line-height:inherit;}
+.tit_area.sty2 .tit{color:#000;font-size:17px;}
+
+/* 리스트스타일 */
+.listbox{display:flex;flex-wrap:wrap;}
+.listbox > li{margin:0.3%;}
+.listbox > li > a{display:block;border:1px solid #ededed;text-align:center;padding:5px 3px;font-size:14px;background-color:#fff;}
+.listbox.sty1 > li.on > a{background:#f0f0f0;color:#000}
+.listbox.sty2{flex-wrap:nowrap;justify-content:space-between;align-items:center;}
+.listbox.sty2 > li{width:100%;}
+.listbox.sty2 > li.on > a{border:1px solid #aaaaaa}
+.listbox.wids1 > li{width:10.5%;}
+.listbox.wids2 > li{width:13.67%;}
+
+/* 탭박스 컨텐츠 */
+.tabs_target{display:none;}
+.tabs_target.on{display:block;}
+
+/* flexbox */
+[class*='flexbox']{display:flex;flex-wrap:nowrap;justify-content:space-between;align-items:center;}
+[class*='flexbox'] > *, .tbl .listbox > li{width:100%;margin:2px}
+[class*='flexbox'] > *:first-child, .tbl .listbox > li:first-child;{margin-left:0 !important}
+[class*='flexbox'] > *:last-child, .tbl .listbox > li:last-child{margin-right:0 !important}
+.flexboxin{display:inline-flex;}
+
+/* 폼요소 flex */
+.tbl .frm_box > *, .tbl .listbox > li{margin-top:0;margin-bottom:0;}
+.tbl .frm_box > *:first-child {margin-left:0 !important;}
+.tbl .frm_box > *:last-child {margin-right:0 !important;}
+
+/* 버튼요소 */
+.btnarea{display:flex;}
+.btncom {display:inline-flex;text-align:center;justify-content:center;vertical-align:middle;align-content:center;align-items:center;}
+.btncom.sty1{background:#fe802b;border:1px solid #de7531;color:#fff}
+.btncom.sty2{background:#fff;border:1px solid #676767;color:#666}
+.btncom.sizeS{height:30px;padding:2px 10px;font-size: 14px;}
+[class*='flexbox'] .btncom{display:flex;}
+
+/* 필수사항 */
+.ess{display:inline-block;color:#fe0000;width:10px;overflow:hidden;height:1em;font-size:16px;font-weight:bold;}
+
+/* 테이블 */
+.tbl{border-bottom:1px solid #ededed;}
+.tbl tbody th, .tbl tbody td{padding:8px 10px;border-top:1px solid #ededed}
+.tbl tbody th{padding-left:8px;padding-right:8px;background:#f3f3f3;font-size:14px;color:#000; text-align:center;}
+.tbl .toptxt{color:#777; margin-bottom:6px;font-size:14px}
+.tbl .txtarea{border-top:none;border-left:none;border-right:none;}
+
+/* 이미지 */
+.comico{display:inline-block;background:no-repeat 0 0;background-size:100% auto;vertical-align:middle;}
+.comico + .txt{margin-left:6px;display:inline-block;vertical-align:middle}
+.comico.file{width:20px;height:18px;background-image:url(../img/icon_file.png)}
+.comico.rvwrite{width:17px;height:17px;background-image:url(../img/icon_rvwrite.png)}
+/*************** 공통요소 (클래스 한개로 제어) *****************/
+
+/* 검색영역 */
+.srchbox .btncom{width:140px}
+
+/* 리뷰 */
+.flexbox.write_box{align-items:stretch;}
+.write_box .btncom.sizeS{height:auto;width:140px;}
+.comment_box > li{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid #e8e8e8;}
+.comment_box .date{color:#afaca6;padding-left:16px;font-size:13px;vertical-align:bottom;}
+.comment_box .user_nick{margin-bottom:16px;}
+.comment_box .user_nick .txt{font-weight:bold;font-size:17px;}
+.comment_box .user_write{font-size:14px;}
+
+/* 메인박스 명함영역 */
+.box_list_info{display:flex;flex-wrap:wrap;gap:15px 8px;font-weight:300;justify-content: space-between;}
+.box_list_info > li{width:49.2%;border:1px solid #ccc;padding:8px 14px 12px 14px;border-radius:6px;box-shadow:1px 1px 1px #f8f8f8;box-sizing:border-box;}
+.box_list_info > li > a{display:block;}
+.box_list_info .bscard{margin: 0 -4px 10px -4px;padding:4px 8px;background:#eee;}
+.box_list_info .bscard .name{font-size:22px;font-weight:600;}
+.box_list_info .bscard .shop{padding-left:6px;}
+.box_list_info .info_txt > dt{position:absolute;padding-right:8px;margin-bottom:7px;}
+.box_list_info .info_txt > dt:after{content: '';position:absolute;display:block;top:5px;right: 0;width:1px;height:0.9em;background:#aaa;}
+.box_list_info .info_txt > dd{padding-left:40px;margin-bottom:7px;}
+.box_list_info .infotel .tel{font-size: 16px;font-weight:600;color:#ff385c}
+
+@media (max-width:768px) { /* 테블릿 */
+  .tit_area{margin-bottom:10px;}
+  .tit_area.sty1 .tit{font-size:21px;}
+  .tit_area.sty2 .tit{font-size:19px;}
+
+  .comico + .txt{font-size:15px;}
+
+  .btncom.sizeS{height:36px;padding-top:5px;padding-bottom:5px;font-size:15px;}
+
+  .sect_conb1{margin-bottom:20px;}
+  .sect_conb2{margin-bottom:10px;}
+  .sect_cont1{margin-top:20px;}
+  .sect_cont2{margin-top:10px;}
+
+  .listbox.wids1 > li{width:15.99%;}
+  .listbox.wids2 > li{width:24.35%;}
+  .listbox > li > a{font-size:15px;}
+
+  .tbl .ess{font-size:15px;}
+  .tbl tbody th{font-size:15px;}
+  .tbl .listbox[class*="wid"], .tbl [class*='flexbox'][class*="wid"]{width:auto !important}
+  .tbl .toptxt{font-size:15px;}
+
+  .comment_box .user_write{font-size: 15px;}
+  
+  .box_list_info .info_txt > dt{font-size:15px;}
+  .box_list_info .info_txt > dd{font-size:15px;padding-left:43px;margin-bottom:9px;}
+  .box_list_info .infotel .tel{font-size:18px;}
+}
+
+@media (max-width:540px) { /* 핸드폰 */
+  .listbox > li{margin:0.5%;}
+  .listbox.wids1 > li{width:23.95%;}
+  .listbox.wids2 > li{width:32.30%;}
+
+  .tbl.appli_form col.wid30{width:38% !important;}
+
+  .box_list_info > li{width:100%;} 
+}
